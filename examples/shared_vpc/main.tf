@@ -18,27 +18,27 @@ locals {
   subnet_01 = "${var.network_name}-subnet-01"
   subnet_02 = "${var.network_name}-subnet-02"
 }
-/*
+
 /******************************************
   Host Project Creation
  *****************************************/
-module "host-project" {
-  source                         = "../../"
-  random_project_id              = true
-  name                           = var.host_project_name
-  org_id                         = var.organization_id
-  folder_id                      = var.folder_id
-  billing_account                = var.billing_account
-  enable_shared_vpc_host_project = true
-  default_network_tier           = var.default_network_tier
+#module "host-project" {
+#  source                         = "../../"
+#  random_project_id              = true
+#  name                           = var.host_project_name
+#  org_id                         = var.organization_id
+#  folder_id                      = var.folder_id
+#  billing_account                = var.billing_account
+#  enable_shared_vpc_host_project = true
+#  default_network_tier           = var.default_network_tier
+#
+#  activate_apis = [
+#    "compute.googleapis.com",
+#    "cloudresourcemanager.googleapis.com"
+#  ]
+#
+#}
 
-  activate_apis = [
-    "compute.googleapis.com",
-    "cloudresourcemanager.googleapis.com"
-  ]
-
-}
-*/
 /******************************************
   Network Creation
  *****************************************/
