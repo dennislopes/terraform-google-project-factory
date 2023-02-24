@@ -17,7 +17,7 @@
 module "project-factory" {
   source                  = "../../"
   random_project_id       = true
-  name                    = "dls-sample-project"
+  name                    = "ACME-project"
   org_id                  = var.organization_id
   billing_account         = var.billing_account
   default_service_account = "deprivilege"
@@ -33,7 +33,7 @@ module "project-factory" {
 module "test-vpc-module" {
   source       = "terraform-google-modules/network/google"
   version      = "~> 5.2"
-  project_id   = "simple-sample-project-9c0c"
+  project_id   = module.project-factory.project_id
   network_name = "my-custom-mode-network"
   mtu          = 1460
 
