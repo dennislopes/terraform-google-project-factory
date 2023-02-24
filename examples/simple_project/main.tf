@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/**
 module "project-factory" {
   source                  = "../../"
   random_project_id       = true
@@ -63,3 +63,4 @@ module "test-vpc-module" {
     }
   ]
 }
+  */
