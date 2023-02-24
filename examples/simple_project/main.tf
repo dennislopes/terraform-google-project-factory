@@ -17,7 +17,7 @@
 module "project-factory" {
   source                  = "../../"
   random_project_id       = true
-  name                    = "ACME-project"
+  name                    = "acme-project"
   org_id                  = var.organization_id
   billing_account         = var.billing_account
   default_service_account = "deprivilege"
